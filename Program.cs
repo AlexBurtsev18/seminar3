@@ -106,29 +106,44 @@
 // int n = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine(IsPalindrom(n));
 
-// Task 21. Напишите программу, которая принимает на вход координаты двух точек
+// Task 21++. Напишите программу, которая принимает на вход координаты двух точек
 // и находит расстояние между ними в 3D пространстве.
 
-double Direct(double x1, double y1, double z1, double x2, double y2, double z2)
-{
-    double distX = x2 - x1;
-    double distY = y2 - y1;
-    double distZ = z2 - z1;
-    double result = Math.Sqrt(distX*distX + distY*distY + distZ*distZ);
-    return result;
-}
-Console.WriteLine("Введите координаты x1: ");
-double x1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите координаты y1: ");
-double y1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите координаты z1: ");
-double z1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите координаты x2: ");
-double x2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите координаты y2: ");
-double y2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите координаты z2: ");
-double z2 = Convert.ToDouble(Console.ReadLine());
+// double Direct(double x1, double y1, double z1, double x2, double y2, double z2)
+// {
+//     double distX = x2 - x1;
+//     double distY = y2 - y1;
+//     double distZ = z2 - z1;
+//     double result = Math.Sqrt(distX*distX + distY*distY + distZ*distZ);
+//     return result;
+// }
+// Console.WriteLine("Введите координаты x1: ");
+// double x1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координаты y1: ");
+// double y1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координаты z1: ");
+// double z1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координаты x2: ");
+// double x2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координаты y2: ");
+// double y2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите координаты z2: ");
+// double z2 = Convert.ToDouble(Console.ReadLine());
 
-double result = Math.Round(Direct(x1, y1, z1, x2, y2, z2),2);
-Console.WriteLine($"Расстояние между точками А и B составляет {result}");
+// double result = Math.Round(Direct(x1, y1, z1, x2, y2, z2),2);
+// Console.WriteLine($"Расстояние между точками А и B составляет {result}");
+
+// Task 23++. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// void Tabl(double N)
+// {
+//     double count = 1;
+//     while(count<=N)
+//     {
+//         Console.WriteLine($"Третья степень числа {count} составляет {Math.Pow(count,3)} ");
+//         count++;
+//     }
+// }
+// Console.WriteLine("Введите цифру, чтобы я возвел ее в куб.");
+// double n = Convert.ToDouble(Console.ReadLine());
+// Tabl(n);
