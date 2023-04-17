@@ -77,3 +77,20 @@
 // double res = Math.Round(Gipotenuza(x1, y1, x2, y2),3);
 
 // Console.WriteLine($"Расстояние между точками 1 и 2 составляет - {res}");
+
+// Homework. 
+// Task 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+int ReverseNumber(int num)
+{
+    int revNum = 0;
+    while (num > 0)
+    {
+        revNum = revNum * 10 + num % 10;
+        num = num / 10;
+    }
+    return revNum;
+}
+Console.WriteLine("Введите число: ");
+int result = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(ReverseNumber(result));
