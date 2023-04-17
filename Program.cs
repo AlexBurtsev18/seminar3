@@ -81,33 +81,54 @@
 // Homework. 
 // Task 19++. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-int ReverseNumber(int num)
-{
-    int revNum = 0;
-    while (num > 0)
-    {
-        revNum = revNum * 10 + num % 10;
-        num = num / 10;
-    }
-    return revNum;
-}
+// int ReverseNumber(int num)
+// {
+//     int revNum = 0;
+//     while (num > 0)
+//     {
+//         revNum = revNum * 10 + num % 10;
+//         num = num / 10;
+//     }
+//     return revNum;
+// }
 
-int IsPalindrom(int n)
+// bool IsPalindrom(int n)
+// {
+//     int rev_n = ReverseNumber(n);
+//     {
+//         if(rev_n == n)
+//             return true;
+//         else 
+//             return false;
+//     }
+// }
+// Console.WriteLine("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(IsPalindrom(n));
+
+// Task 21. Напишите программу, которая принимает на вход координаты двух точек
+// и находит расстояние между ними в 3D пространстве.
+
+double Direct(double x1, double y1, double z1, double x2, double y2, double z2)
 {
-    int rev_n = ReverseNumber(n);
-    {
-        if(rev_n == n)
-        {
-            Console.WriteLine("Молодец! Это палиндром!");
-            return 1;
-        } 
-        else 
-        {
-            Console.WriteLine("Не палиндром!");
-            return 0;
-        }
-    }
+    double distX = x2 - x1;
+    double distY = y2 - y1;
+    double distZ = z2 - z1;
+    double result = Math.Sqrt(distX*distX + distY*distY + distZ*distZ);
+    return result;
 }
-Console.WriteLine("Введите число: ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(IsPalindrom(n));
+Console.WriteLine("Введите координаты x1: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты y1: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты z1: ");
+double z1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты x2: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты y2: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты z2: ");
+double z2 = Convert.ToDouble(Console.ReadLine());
+
+double result = Math.Round(Direct(x1, y1, z1, x2, y2, z2),2);
+Console.WriteLine($"Расстояние между точками А и B составляет {result}");
