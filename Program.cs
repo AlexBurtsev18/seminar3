@@ -79,7 +79,7 @@
 // Console.WriteLine($"Расстояние между точками 1 и 2 составляет - {res}");
 
 // Homework. 
-// Task 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// Task 19++. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 int ReverseNumber(int num)
 {
@@ -91,6 +91,23 @@ int ReverseNumber(int num)
     }
     return revNum;
 }
+
+int IsPalindrom(int n)
+{
+    int rev_n = ReverseNumber(n);
+    {
+        if(rev_n == n)
+        {
+            Console.WriteLine("Молодец! Это палиндром!");
+            return 1;
+        } 
+        else 
+        {
+            Console.WriteLine("Не палиндром!");
+            return 0;
+        }
+    }
+}
 Console.WriteLine("Введите число: ");
-int result = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(ReverseNumber(result));
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(IsPalindrom(n));
